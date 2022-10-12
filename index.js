@@ -33,4 +33,4 @@ app.get("/", (req, res) => {
   res.render("home", { articles, logged });
 });
 
-app.listen(3000, () => console.log("I am alive"));
+app.listen(80, () => console.log("I am alive"));
