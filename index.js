@@ -1,5 +1,5 @@
-import express from "express";
-import { engine } from "express-handlebars";
+const express = require("express");
+const engine = require("express-handlebars").engine;
 
 const app = express();
 
