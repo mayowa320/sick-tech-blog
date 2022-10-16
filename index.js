@@ -1,5 +1,6 @@
 const express = require("express");
 const engine = require("express-handlebars").engine;
+require("dotenv").config();
 
 const app = express();
 
@@ -7,7 +8,7 @@ app.engine("handlebars", engine());
 app.set("view engine", "handlebars");
 app.set("views", "./views");
 
-let logged = true;
+let logged = false;
 let articles = [
   {
     title: "Why MVC is so important",
@@ -31,6 +32,9 @@ let articles = [
 
 app.get("/", (req, res) => {
   res.render("home", { articles, logged });
+});
+app.get("/dashboard", (req, res) => {
+  res.render("dashboard");
 });
 
 app.listen(process.env.PORT, () => console.log("I am alive"));
