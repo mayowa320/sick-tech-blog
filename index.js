@@ -39,5 +39,8 @@ app.get("/dashboard", (req, res) => {
 app.get("/login", (req, res) => {
   res.render("login");
 });
+app.get("/signup", (req, res) => {
+  res.render("signup");
+});
 
 app.listen(process.env.PORT, () => console.log("I am alive"));

@@ -1,1 +1,13 @@
-<h3>My Dashboard</h3>
+<section>
+
+  <button>Add Post</button>
+</section>
+
+<script>
+  let button = document.querySelector('button'); button.onclick = function(){
+  let template = ` <div class="article"> <div class="article_heading"> <div>Add
+  Post</div> </div> <div class="article_body"> <div>Title</div> <input />
+  <div>Content</div> <input /> <button>Add Post</button> </div> </div> `; let
+  section = document.querySelector('section');
+  section.insertAdjacentHTML('afterbegin', template); }
+</script>
